@@ -10,14 +10,11 @@ COPY package.json package-lock.json ./
 # Install project dependencies
 RUN npm install
 
-RUN npm install -g @angular/cli
-#COPY server.js .
-
 # Copy the project files to the working directory
 COPY . .
 
-# Build the Angular app for production
-RUN ng build
+# Build the Angular app
+RUN npm run  build
 
 # Expose port 80 for the container
 EXPOSE 80
