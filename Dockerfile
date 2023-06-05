@@ -11,6 +11,7 @@ COPY package.json package-lock.json ./
 RUN npm install
 
 RUN npm install -g @angular/cli
+#COPY server.js .
 
 # Copy the project files to the working directory
 COPY . .
